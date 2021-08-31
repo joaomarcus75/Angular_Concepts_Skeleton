@@ -1,0 +1,24 @@
+.negative{
+  color:red;
+
+}
+.valor {
+
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.person-card{
+  width:200px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  label{
+    display: inline-block;
+    min-width: 80px;
+    text-align: right;
+    padding-right: 10px;
+  }
+}

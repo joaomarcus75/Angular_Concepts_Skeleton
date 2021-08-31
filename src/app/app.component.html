@@ -1,0 +1,35 @@
+<div>
+    {{title}}
+</div>
+<div>
+  <button
+  [title]=""
+  [style]="ButtonStyle"
+  (click)="incrementaTitle()" >incrementaTitle</button>
+</div>
+
+<div class="valor" [class.negative]="valor < 0">
+{{valor}}<br>
+</div>
+<div>
+  <label *ngIf="valor < 0">O número tem que ser positivo</label>
+</div>
+<div class="form">
+Nome<input type ="text" name="nome" id="nome" [(ngModel)]="model.nome"><br>
+Idade<input type ="text" name="idade" id="idade" [(ngModel)]="model.idade" >
+Telefone <input type ="text" name="telefone" id="telefone" [(ngModel)]="model.telefone" >
+<input type ="radio" name="sexo" id="Feminino" [(ngModel)]="model.sexo" > Feminino &nbsp;&nbsp;
+<input type ="radio" name="sexo" id="Masculino" [(ngModel)]="model.sexo" > Masculino <br>
+<button (click)="adicionarPessoa()">Adicionar</button>
+{{ model | json }}
+</div>
+
+
+<div>
+  <div class="person-card" *ngFor="let pes of pessoas">
+   <label>Nome: </label> {{pes.nome}}<br>
+   <label>Idade: </label> {{pes.idade}} <br>
+   <label>Telefone: </label>{{pes.telefone}} <br>
+   <label>Sexo: </label> {{pes.sexo}}
+  </div>
+</div>
